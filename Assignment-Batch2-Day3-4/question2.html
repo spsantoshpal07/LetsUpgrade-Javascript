@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, rgb(230, 245, 16), hsl(19, 92%, 47%));
+        }
+
+        .container {
+            margin: 400px 600px 80px 600px;
+            font-weight: 700;
+            font-size: 35px;
+        }
+
+        .input-field-1 {
+            margin: 10px;
+        }
+
+        .input-field-2 {
+            margin: 10px;
+        }
+
+        .input-1 {
+            height: 25px;
+            border-radius: 4px;
+            background-color: beige;
+            font-size: 20px;
+
+        }
+
+        .input-2 {
+            height: 25px;
+            border-radius: 4px;
+            background-color: rgb(238, 206, 158);
+            font-size: 20px;
+        }
+
+        .btn {
+            padding: 40px 100px 80px 200px;
+        }
+
+        .btn-1 {
+            border: 1px solid rgb(114, 73, 160);
+            height: 40px;
+            background-color: blueviolet;
+            color: #000;
+            font-weight: 700;
+            font-size: 25px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px 8px rgb(56, 54, 54);
+        }
+
+        .btn-1:hover {
+            box-shadow: 3px 3px 8px 6px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-field-1">
+            <label>Enter something here:</label>
+            <input type="text" placeholder="enter something here..." class="input-1" value="" />
+        </div>
+        <div class="input-field-2">
+            <label>Copied text:</label>
+            <input type="text" placeholder="copied text" class="input-2" disabled />
+        </div>
+        <div class="btn">
+            <button class="btn-1" onclick="textCopy()">Click to copy</button>
+        </div>
+    </div>
+
+    <script>
+        const textCopy = () => {
+            const data = document.getElementsByClassName('input-1')[0].value;
+            document.getElementsByClassName('input-2')[0].value = data;
+        }
+    </script>
+</body>
+</html>

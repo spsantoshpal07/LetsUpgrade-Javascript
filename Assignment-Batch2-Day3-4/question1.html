@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(to right, rgb(39, 192, 192), rgba(223, 15, 212, 0.945));
+        }
+        
+
+        .img-container {
+            height: 40vh;
+            width: 60vw;
+            margin: auto;
+            padding: 20px;
+            padding-bottom: 80px;
+        }
+
+        img {
+            margin-left: 270px;
+            width: 600px;
+            height: auto;
+        }
+
+        .btn-container {
+            text-align: center;
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        .btn {
+            border: 1px solid #fff;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            background-color: #fff;
+            color: #000;
+            display: block;
+            margin: 0 43vw 20px 43vw;
+            box-shadow: 2px 3px 10px 8px rgb(46, 44, 44);
+        }
+
+        .btn:hover {
+            box-shadow: 2px 3px 6px 5px rgb(46, 44, 44);
+        }
+
+        .btn-1 {
+            background-color: darkgreen;
+        }
+
+        .btn-2 {
+            background-color: yellowgreen;
+        }
+
+        .btn-3 {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="./images/1.jpg" alt="scenery-1" />
+    </div>
+    <div class="btn-container">
+        <a href="#" class="btn btn-1" onclick="onReset()">Reset</a>
+        <a href="#" class="btn btn-2" onclick="onimage2()">Image 2</a>
+        <a href="#" class="btn btn-3" onclick="onimage3()">Image 3</a>
+</div>
+
+<script>
+    const onReset = () => {
+        const image = document.getElementsByTagName('img')[0];
+        image.src = './images/1.jpg';
+    }
+
+    const onimage2 = () => {
+        img = document.getElementsByTagName('img')[0];
+        console.log(img);
+        img.src = './images/2.jpeg';
+    }
+
+    const onimage3 = () => {
+        img = document.getElementsByTagName('img')[0];
+        img.src = './images/3.jpg';
+    }
+</script>
+</body>
+</html>
