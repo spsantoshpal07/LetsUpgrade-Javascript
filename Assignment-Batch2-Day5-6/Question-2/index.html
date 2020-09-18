@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Question, initial-scale=1.0">
+    <link rel="stylesheet" href="Question-2.css">
+    <title>Question-1</title>
+</head>
+<body>
+    <div class="container">
+        <input class='search' onkeyup="onSearch(event)" value='' type="text" name='search' placeholder="Search by source or destination..." />
+        <!-- <input onkeyup="onSearch(event)" value='' type="text" name='search' placeholder="Search by name..." /> -->
+
+        <form class='addBus' onsubmit="addBusData(event)">
+            <div>
+                <label>Name of Bus:</label>
+                <input id='name' class='bus' type="text" name='name' value='' required />
+            </div>
+
+            <div>
+                <label>Source:</label>
+                <input id='source' class='bus' type="text" name='source' value='' required >
+            </div>
+
+            <div>
+                <label>Destination:</label>
+                <input id='destination' class='bus' type="text" name='destination' value='' required >
+            </div>
+
+            <div>
+                <label>Bus Number:</label>
+                <input id='number' class='bus' type="text" name='BusNumber' value='' required >
+            </div>
+
+            <div>
+                <label>Passenger Capacity:</label>
+                <input id='capacity' class='bus' type="text" name='PassengerCapacity' value='' required >
+            </div>
+
+            <div class="button">
+                <button type="submit" style="font-size: 20px; width: 90px;">Add Bus</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Bus No.</th>
+                    <th>Bus Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Passenger Capacity</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="tabledata">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="Question-2.js"></script>
+</body>
+</html>
