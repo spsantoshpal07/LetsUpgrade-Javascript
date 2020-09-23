@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .header {
+        height: 70px;
+        width: 100%;
+        background-color: lightgrey;
+        line-height: 70px;
+        position: relative;
+        display: flex;
+      }
+
+      h1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+
+      .search {
+        height: 70px;
+        width: 40%;
+        /* background-color: red; */
+        display: inline-block;
+      }
+
+      .search input {
+        height: 40px;
+        width: 100%;
+        text-indent: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        outline: none;
+      }
+
+      .products {
+        width: 100%;
+        height: auto;
+        /* background-color: gray; */
+      }
+
+      .productwrapper {
+        height: auto;
+        width: 80%;
+        /* background-color: green; */
+        margin-left: 10%;
+        margin-bottom: 50px;
+      }
+
+      .product {
+        height: auto;
+        width: 25%;
+        /* background-color: red; */
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 6.25%;
+        border: 1px solid lightgray;
+      }
+
+      .prodimg {
+        height: 300px;
+        width: 100%;
+        /* background-color: yellow; */
+        overflow: hidden;
+      }
+
+      .product h3,
+      .product p {
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      .product p {
+        color: gray;
+      }
+      button {
+        padding: 10px;
+      }
+
+      .cart-icon {
+        width: 5%;
+        height: auto;
+        position: absolute;
+        left: 93%;
+        top: 12px;
+        
+      }
+
+      .cart-icon .cart-img {
+        width: 40px;
+        border: 1px solid black;
+        box-shadow: 2px 3px 10px 3px black;
+        padding: 4px 6px;
+      }
+
+      .cart-icon .cart-img:hover {
+        box-shadow: 1px 2px 8px 2px black;
+      }
+
+      .counter {
+        position: relative;
+      }
+
+      .count {
+        position: absolute;
+        bottom: 22px;
+        left: 22px;
+        font-weight: 800;
+      }
+
+      a {
+          text-decoration: none;
+          color: black;
+      }
+
+      .filter-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .filter {
+        margin-right: 10px;
+        border: 1px solid;
+        border-radius: 4px;
+        padding-left: 10px;
+      }
+
+      .btn {
+        font-weight: 800;
+        color: black;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px 3px black;
+        outline: none;
+      }
+
+      .btn:active {
+        box-shadow: 1px 2px 7px 3px black;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1><a href="shopping.html">Shopping 360</a></h1>
+      <div class="search">
+        <input
+          type="search"
+          onkeyup="searchProduct(this.value)"
+          placeholder="Search For Products"
+        />
+      </div>
+      <div class="cart-icon">
+        <a href="cart.html"><img class="cart-img" src="./shopping-cart.png" alt='cart' />
+        <div class="counter">
+          <span class="count">0</span>
+        </div></a>
+      </div>
+    </div>
+
+    <div class="filter-div">
+      <input class='filter' id='min' type="number" placeholder="Minimum price" value=0 />
+      <input class='filter' id='max' type="number" placeholder="Maximum price" value=0 />
+      <button class="btn" onclick="filterProduct()">Filter out</button>
+    </div>
+
+    <div class="products">
+      <div class="productwrapper" id="productwrapper"></div>
+    </div>
+
+    <script src="shopping.js"></script>
+  </body>
+</html>

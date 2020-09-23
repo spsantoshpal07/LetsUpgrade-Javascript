@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+            height: 70px;
+            width: 100%;
+            background-color: lightgrey;
+            line-height: 70px;
+            position: relative;
+            display: flex;
+        }
+
+        .header h1 {
+            margin-left: 5%;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+
+        .products {
+            width: 100%;
+            height: auto;
+            /* background-color: gray; */
+            }
+
+        .productwrapper {
+            height: auto;
+            width: 80%;
+            /* background-color: green; */
+            margin-left: 10%;
+            margin-bottom: 50px;
+        }
+
+        .count {
+            text-align: center;
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 40px;
+        }
+
+        .product {
+        height: auto;
+        width: 25%;
+        /* background-color: red; */
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 6.25%;
+        border: 1px solid lightgray;
+      }
+
+      .prodimg {
+        height: 300px;
+        width: 100%;
+        /* background-color: yellow; */
+        overflow: hidden;
+      }
+
+      .product h3,
+      .product p {
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      .product p {
+        color: gray;
+      }
+      button {
+        padding: 10px;
+      }
+
+      .productwrapper {
+        height: auto;
+        width: 80%;
+        /* background-color: green; */
+        margin-left: 10%;
+        margin-bottom: 50px;
+      }
+
+      a {
+          text-decoration: none;
+          color: black;
+      }
+    </style>
+</head>
+<body>
+    <div class="header">
+      <h1><a href="shopping.html">Shopping 360</a></h1>
+    </div>
+    <div class="products">
+        <h1 style="text-align: center;">CartItems</h1>
+        <div class="count">
+            TOTAL ITEMS: <span class="count-item">0</span>
+        </div>
+        <div class="productwrapper" id="cart"></div>
+      </div>
+
+      <script src="cart.js"></script>
+</body>
+</html>
